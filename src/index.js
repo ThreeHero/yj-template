@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Suspense } from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { ConfigProvider } from 'antd'
+import zhCN from 'antd/locale/zh_CN'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import antdStyleConfig from '@/config/antd.style.config'
+import config from '@/config/project.config'
+
+import App from './App'
+import YJUtils from 'yj-design-tools'
+
+import '@/assets/style/index.css'
+
+YJUtils.App.setConfig(config)
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  <Suspense>
+    <ConfigProvider
+      autoInsertSpaceInButton={false}
+      locale={zhCN}
+      theme={antdStyleConfig}
+    >
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ConfigProvider>
+  </Suspense>
+)
