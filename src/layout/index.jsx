@@ -7,6 +7,8 @@ import config from '@/config/project.config'
 import { logout } from '@/utils/tools'
 import { message } from 'antd'
 
+import useTitle from '@/hooks/useTitle'
+
 const { name: projectName } = config
 function Index() {
   // 跳转页面
@@ -14,6 +16,8 @@ function Index() {
   const jumpPage = useCallback(({ key }) => {
     navigate(key)
   }, [])
+
+  useTitle(projectName)
 
   return (
     <Layout

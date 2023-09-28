@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { message } from 'antd'
 import YJUtils from 'yj-design-tools'
 import { USERINFO } from '@/config/const.config'
+import useTitle from '@/hooks/useTitle'
 
 const testLoginConfig = {
   username: 'admin',
@@ -14,6 +15,8 @@ const { setToken, setCache } = YJUtils.App
 
 export default () => {
   const navigate = useNavigate()
+
+  useTitle('登录')
 
   const login = useCallback(({ username, password }) => {
     if (username === testLoginConfig.username && password === testLoginConfig.password) {
