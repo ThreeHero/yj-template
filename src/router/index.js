@@ -5,11 +5,16 @@ import Main from '@/layout'
 import routes from './utils'
 
 import Login from '@/layout/login'
+import Auth from '@/components/Auth'
 
 export default [
   {
     path: '/',
-    element: <Main />,
+    element: (
+      <Auth>
+        <Main />
+      </Auth>
+    ),
     children: [
       {
         path: '/',

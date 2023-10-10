@@ -4,6 +4,9 @@ const resolve = dir => path.resolve(__dirname, dir)
 const CracoLessPlugin = require('craco-less')
 
 module.exports = {
+  devServer: {
+    port: 9010
+  },
   webpack: {
     alias: {
       '@': resolve('src'),

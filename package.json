@@ -16,11 +16,11 @@
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "yj-design-components": "^1.0.3",
-    "yj-design-tools": "^1.1.8"
+    "yj-design-components": "^1.0.5",
+    "yj-design-tools": "^1.1.12"
   },
   "scripts": {
-    "start": "set PORT=80 && craco start",
+    "start": "craco start",
     "build": "craco build",
     "prettier": "prettier --write ."
   },
