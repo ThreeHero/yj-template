@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 import { Login } from 'yj-design-components'
 import { useNavigate } from 'react-router-dom'
 import { message } from 'antd'
-import YJUtils from 'yj-design-tools'
+import { App } from 'yj-design-tools'
 import { USERINFO } from '@/config/const.config'
 import useTitle from '@/hooks/useTitle'
 
@@ -11,7 +11,7 @@ const testLoginConfig = {
   password: '123456'
 }
 
-const { setToken, setCache } = YJUtils.App
+const { setToken, setCache } = App
 
 export default () => {
   const navigate = useNavigate()

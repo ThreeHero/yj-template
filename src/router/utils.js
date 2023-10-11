@@ -1,14 +1,30 @@
-// todo 引入pages
-import routerConfig from '@/config/router.config'
 import { lazy } from 'react'
 
-const replaceIndex = path => path.replace(/(\/index)?\.[jt]sx?/g, '')
+const replaceIndex = path => path.replaceAll('./', '').replace(/(\/index)?\.[jt]sx?/g, '')
+const whiteRoute = ['api', 'components', 'map']
 
-const routes = routerConfig.map(item => replaceIndex(item))
+const getRoutes = () => {
+  const pagesContext = require.context('../pages', true, /\.[jt]sx?$/)
+  const pageModules = pagesContext
+    .keys()
+    .map(modulePath => {
+      const pathWithoutExtension = replaceIndex(modulePath)
+
+      if (whiteRoute.includes(pathWithoutExtension.split('/').at(1))) {
+        return null
+      }
+
+      return pathWithoutExtension
+    })
+    .filter(Boolean)
+
+  return pageModules
+}
+
+const routes = getRoutes()
 
 const routesFile = routes.map(file => {
   const Component = lazy(() => import('pages/' + file))
-  // lazy(() => `import(${file})`)
   // 判断
   const path = '/' + file.replaceAll('/[', '[').replaceAll('[', '/:').replaceAll(']', '')
 

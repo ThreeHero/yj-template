@@ -1,10 +1,10 @@
-import YJUtils from 'yj-design-tools'
+import { App } from 'yj-design-tools'
 import { USERINFO } from '@/config/const.config'
 
 import config from '@/config/http.config'
 
 const { baseURL } = config
-const { clearCache, clearToken } = YJUtils.App
+const { clearCache, clearToken } = App
 
 export function logout(callback) {
   clearToken()

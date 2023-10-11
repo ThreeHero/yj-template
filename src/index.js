@@ -8,11 +8,11 @@ import antdStyleConfig from '@/config/antd.style.config'
 import config from '@/config/project.config'
 
 import App from './App'
-import YJUtils from 'yj-design-tools'
+import { App as AppConfig } from 'yj-design-tools'
 
 import '@/assets/style/index.css'
 
-YJUtils.App.setConfig(config)
+AppConfig.setConfig(config)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
