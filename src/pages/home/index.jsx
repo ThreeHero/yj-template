@@ -1,7 +1,8 @@
 import React from 'react'
+import { Button } from 'yj-design-components'
 
 function Index() {
-  return <div>首页</div>
+  return <Button type="primary">首页</Button>
 }
 
 export default Index
