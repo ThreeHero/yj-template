@@ -8,6 +8,9 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
     "antd": "^5.9.2",
     "craco-less": "^3.0.1",
     "glob": "^10.3.9",
@@ -16,9 +19,10 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
+    "typescript": "^5.2.2",
     "web-vitals": "^2.1.4",
-    "yj-design-components": "^1.0.6",
-    "yj-design-tools": "^1.1.15"
+    "yj-design-components": "1.0.8",
+    "yj-design-tools": "1.1.15"
   },
   "scripts": {
     "start": "craco start",

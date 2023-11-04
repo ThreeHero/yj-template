@@ -10,7 +10,14 @@ module.exports = {
   webpack: {
     alias: {
       '@': resolve('src'),
-      pages: resolve('src/pages')
+      pages: resolve('src/pages'),
+      components: resolve('src/components'),
+      config: resolve('src/config'),
+      hooks: resolve('src/hooks'),
+      layout: resolve('src/layout'),
+      router: resolve('src/router'),
+      style: resolve('src/assets/style'),
+      utils: resolve('src/utils')
     }
   },
   plugins: [
