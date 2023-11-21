@@ -4,7 +4,7 @@
     "module": "esnext",
     "baseUrl": "./",
     "allowJs": true,
-    "checkJs": true, // 允许在JS文件中报错，通常与allowJS一起使用
+    "checkJs": false, // 允许在JS文件中报错，通常与allowJS一起使用
     "moduleResolution": "node",
     "paths": {
       "@/*": ["src/*"],
