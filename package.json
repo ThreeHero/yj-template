@@ -20,7 +20,7 @@
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
-    "yj-design-components": "1.0.9",
+    "yj-design-components": "1.0.10",
     "yj-design-tools": "1.1.15"
   },
   "scripts": {
