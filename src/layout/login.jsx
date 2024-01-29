@@ -18,12 +18,13 @@ export default () => {
 
   useTitle('登录')
 
-  const login = useCallback(({ username, password }) => {
+  const login = useCallback(async ({ username, password }) => {
     if (username === testLoginConfig.username && password === testLoginConfig.password) {
       message.success('登录成功')
       setToken('demo')
       setCache(USERINFO, { username: 'admin', token: 'demo' })
       navigate('/')
+      window.location.reload()
     } else {
       message.error('登录失败')
     }
