@@ -1,3 +1,39 @@
 #root {
   height: 100%;
+  --primaryColor: #00b96b;
+  /* 主要颜色加透明度 */
+  --primaryBgColor: #00b96b33;
+
+  /* 滚动条 */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* 滑轨背景色 */
+  ::-webkit-scrollbar-track {
+    background-color: var(--primaryBgColor);
+    opacity: 0.2;
+  }
+
+  /* 滑块颜色 */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    background-image: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.4) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0.4) 75%,
+      transparent 75%,
+      transparent
+    );
+    border-radius: 1em;
+  }
+
+  ::selection {
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--primaryColor);
+  }
 }
