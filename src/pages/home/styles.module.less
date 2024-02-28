@@ -1,0 +1,22 @@
+.home {
+  display: grid;
+  // grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  gap: 20px;
+
+  .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: aquamarine;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+  }
+}

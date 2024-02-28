@@ -6,7 +6,7 @@ declare module 'yj-design-tools' {
     static setToken(params: any): (params: any) => any
     static clearToken(): () => any
     static setCache(key: any, value: any): (key: any, value: any) => any
-    static getCache(key: any): (key: any) => any
+    static getCache(key: any): any
     static clearCache(key: any): (key: any) => any
     static md5(str: any): (str: any) => any
     static dayjs(params: any): (params: any) => any

@@ -5,7 +5,8 @@ import Main from '@/layout'
 import routes from './utils'
 
 import Login from '@/layout/login'
-import Auth from '@/components/Auth'
+import { Auth } from '@/components'
+import NotFound from '@/layout/NotFound'
 
 export default [
   {
@@ -20,7 +21,11 @@ export default [
         path: '/',
         element: <Navigate to="/home" />
       },
-      ...routes
+      ...routes,
+      {
+        path: '*',
+        element: <NotFound />
+      }
     ]
   },
   {
