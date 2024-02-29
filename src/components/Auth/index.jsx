@@ -1,5 +1,5 @@
 import React from 'react'
-import { App } from 'yj-design-tools'
+import { getToken } from 'yj-design-tools'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 function Auth({ children }) {
@@ -7,7 +7,7 @@ function Auth({ children }) {
   const location = useLocation()
 
   React.useEffect(() => {
-    const token = App.getToken()
+    const token = getToken()
 
     if (!token) {
       navigate('/login')

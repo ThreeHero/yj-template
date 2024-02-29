@@ -2,16 +2,13 @@ import React, { useCallback } from 'react'
 import { Login } from 'yj-design-components'
 import { useNavigate } from 'react-router-dom'
 import { message } from 'antd'
-import { App } from 'yj-design-tools'
-import { USERINFO } from '@/config/const.config'
+import { setToken, setUserinfo } from 'yj-design-tools'
 import useTitle from '@/hooks/useTitle'
 
 const testLoginConfig = {
   username: 'admin',
   password: '123456'
 }
-
-const { setToken, setCache } = App
 
 export default () => {
   const navigate = useNavigate()
@@ -22,7 +19,7 @@ export default () => {
     if (username === testLoginConfig.username && password === testLoginConfig.password) {
       message.success('登录成功')
       setToken('demo')
-      setCache(USERINFO, { username: 'admin', token: 'demo' })
+      setUserinfo({ username: 'admin', token: 'demo' })
       navigate('/')
       window.location.reload()
     } else {

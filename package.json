@@ -21,7 +21,7 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
     "yj-design-components": "1.0.14",
-    "yj-design-tools": "1.1.19"
+    "yj-design-tools": "1.2.0"
   },
   "scripts": {
     "start": "craco start",
