@@ -7,7 +7,7 @@ import antdStyleConfig from '@/config/antd.style.config'
 
 import App from './App'
 
-import '@/assets/style/index.css'
+import '@/assets/style/index.less'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

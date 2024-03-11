@@ -1,7 +1,7 @@
 import { lazy } from 'react'
 
 const replaceIndex = path => path.replaceAll('./', '').replace(/(\/index)?\.[jt]sx?/g, '')
-const whiteRoute = ['api', 'components', 'map']
+const whiteRoute = ['api', 'components']
 
 const getRoutes = () => {
   const pagesContext = require.context('../pages', true, /\.[jt]sx?$/)

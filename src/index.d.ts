@@ -1,16 +1,23 @@
 declare module 'yj-design-tools' {
-  export class App {
-    static getConfig(): () => any
-    static setConfig(params: any): (params: any) => any
-    static getToken(): () => any
-    static setToken(params: any): (params: any) => any
-    static clearToken(): () => any
-    static setCache(key: any, value: any): (key: any, value: any) => any
-    static getCache(key: any): any
-    static clearCache(key: any): (key: any) => any
-    static md5(str: any): (str: any) => any
-    static dayjs(params: any): (params: any) => any
-  }
-  export const getHttp: (config: any) => {}
-  export const formatDate: (date: any, format?: string) => {}
+  export const setCache: (key: string, value: any) => undefined
+  export const setToken: (token: string) => undefined
+  export const setUserinfo: (userInfo: object) => undefined
+
+  export const getCache: (key: string) => any
+  export const getToken: () => string
+  export const getUserinfo: () => object
+
+  export const clearCache: (key: string) => undefined
+  export const clearToken: () => undefined
+  export const clearUserinfo: () => undefined
+
+  export const md5: (s: string) => string
+  export const formatDate: (date: any, format?: string) => string
+  // dayjs日期
+  export const dateJs: any
+
+  // 创建axios实例对象
+  export const getInstance: (config: object, callback: (string) => {}, successCode: number) => any
+  // axios实例对象 请求基地址 http://127.0.0.1:9000
+  export const http: any
 }

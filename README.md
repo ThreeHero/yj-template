@@ -1,15 +1,18 @@
-# yj脚手架模板
+## 配置 
 
-## 自定义搭建layout布局
+- 修改样式
 
-## 约定公路由
+    * assets/style/base.less 修改primaryColor
+    * config/project.config.js 修改name
 
-约定pages下为路由文件 其中 `api` | `components` | `map` 文件属于他用文件 不注册路由
+## 安装依赖
 
-- api 用作请求文件
-- components 用作当前路由文件的组件
-- map 用作映射文件
+```shell
+npm i
+```
 
-## 初始化页面
+## 运行
 
-## 暴露的配置文件
+```shell
+npm start
+```

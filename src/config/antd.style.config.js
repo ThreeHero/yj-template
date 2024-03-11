@@ -1,4 +1,6 @@
-export const PRIMARY_COLOR = '#00b96b'
+import antdVariables from '@/assets/style/base.less'
+
+export const PRIMARY_COLOR = antdVariables.primaryColor
 
 const config = {
   token: {
