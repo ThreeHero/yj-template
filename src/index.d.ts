@@ -17,7 +17,7 @@ declare module 'yj-design-tools' {
   export const dateJs: any
 
   // 创建axios实例对象
-  export const getInstance: (config: object, callback: (string) => {}, successCode: number) => any
+  export const getInstance: (config: object, callback: (errorMessage: string) => {}, successCode: number) => any
   // axios实例对象 请求基地址 http://127.0.0.1:9000
   export const http: any
 }

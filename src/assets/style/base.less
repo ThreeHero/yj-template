@@ -1,8 +1,10 @@
 @primaryColor: #00b96b;
-  /* 主要颜色加透明度 */
+/* 主要颜色加透明度 */
 @primaryBgColor: #00b96b33;
 
-#root {
+#root,
+html,
+body {
   height: 100%;
 
   /* 滚动条 */
@@ -13,7 +15,7 @@
 
   /* 滑轨背景色 */
   ::-webkit-scrollbar-track {
-    background-color: @primaryBgColor;
+    background-color: fade(@primaryColor, 20%);
     opacity: 0.2;
   }
 
@@ -34,11 +36,12 @@
   }
 
   ::selection {
-    background: rgba(0, 0, 0, 0.6);
-    color: @primaryColor;
+    background-color: fade(@primaryColor, 20%);
+    color: lighten(@primaryColor, 10%);
+    // color: @primaryColor;
   }
 }
 
 :export {
-  primaryColor: @primaryColor; 
+  primaryColor: @primaryColor;
 }
